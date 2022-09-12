@@ -2,10 +2,11 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDHATj+H4sIAAAAAAAA/+xTS2vbQBD2Wb9iyX3tVfxE1/bQQwqlh97Hq7E8zb7YGRnc0v9epLiKbNIG00IJ+LvsDjPzPSR2Jj7NbPQpIzOFRgtk3XzT68V2vantZrMrYeYh0A5ZpkfwbnI1jDFmtVj0pzHm8iwXq/WkXMzNerlarebzibm/N/PlRJnrpa5HywJ5YkyOUf4091r/MtwbAST6gpkphkodyqIGgUp9/1E8Uqgr9S6GHTUfIRUeBfpmoZSDLTrubkpBStPHdos5oCBPKc4osECwWCkGnxxqSKkfpSDYZJIj7wld3c0yNQGkzfgZOba5W7qT3OJdv5By/IpWLogC+DNufbra3quHVBRa62IcDFLi2aE8hXqPycWjxyD/ItV1JutnbU5oO7WMyZEFrlTZVwfqTH8glpiPD+RJKrUslGJ0aCXmJ4cexO4fRpZ704PkSOep+bJNQZ8cCJ44R1+jgzujf0XgdxJK/QrawcYgQAHzQKsV5GYkopW2o4IdYlIUdhRIjkPDRu8h1OO1LfB+KMlDg5Vqt22Qtuoi8rPRs5/zUpCY5czR4PpTzFKpjSn+97O94YYbbvhr/AwAAP//GbyZfQAKAAABAAD//5IQLx3HAQAA
-    cosign.sigstore.dev/signature: MEQCIFeYNtxmO5WVYfGCTKVaC/fGwuDQMOuviGiIS9UEAusFAiA1TrKwBWGkonX+U4fnq49v6WAe798ChYlatBqiJL/gpg==
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDHATj+H4sIAAAAAAAA/+xTzW7TQBDO2U+x6n2bdXCbyFc4cCgS4sB9sp44Q/dPO+NIBvHuyG5wnahQRSAhpHyX3dHMfD+2dik+LW30KSMzhVYLZN1+1etqu940drPZlbD0EGiHLLc9eLe4GMYYc19V42mMOT/L6n69KKs3Zn23Lk1VLsxqZVarhTKXS12OjgXywpgco/xu7rX+ebj/BJDoM2amGGp1KIsGBGr17XvxSKGp1dsYdtR+gFR4FBibhVIOtuh4uCkFKd0+dlvMAQX5luKSAgsEi7Vi8MmhhpTGUQqCbSbpeU/ommGWqQ0gXcZPyLHLw9KN5A5vxoWU4xe0ckYUwJ9w6+PVjl49pKLQWhfzYJASLw/lMdQ7TC72HoP8jVSXmWyetTmhHdQyJkcWuFblWB1oMP2eWGLuH8iT1OquUIrRoZWYnxx6ELt/mFkeTU+SM52n5ss2BX1yIHjknH2NAe6E/hWBX0ko9TPoABuDAAXME61WkNuZiFbazgp2iElR2FEg6aeGjd5DaOZrW+D9VJKHFmvVbbsgXT1E5GejJz/npSAxy4mjyfXHmKVWG1P862d7xRVXXPHH+BEAAP//HC0aXQAKAAABAAD//xjldxzHAQAA
+    cosign.sigstore.dev/signature: MEUCIQCL76/i58t8/fjV3OIEAZghfFgK4uu4+JHSQGhllpVsFgIgfr/J1gKAGULfyZTdgcrwBhzcLlS1SRbTsC9j6XctX4g=
   creationTimestamp: null
- app.kubernetes.io/instance: sample-app
+  labels:
+    signatureResource: "true"
     integrityshield.io/signatureResource: "true"
     project: sample-app
   name: sample-app-sample-configmap
