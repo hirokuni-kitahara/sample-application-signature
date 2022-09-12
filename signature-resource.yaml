@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDHATj+H4sIAAAAAAAA/+xTzW7TQBDO2U+x6n2bdXHqyFc4cCgS4sB9sp44Q/dPO+NIAfHuyG5wnahQRSAhpHyX3dHMfD+2dik+LW30KSMzhU4LZN191XW1qdetXa+3JSw9BNoiy+0BvFtcDGOMua+q8TTGnJ9ldV8vyuqNqVf1alXVC3N3Z6pyoczlUpejZ4G8MCbHKL+be61/Hu4/AST6jJkphkbty6IFgUZ9+148Umgb9TaGLXUfIBUeBcZmoZSDDToebkpBSreP/QZzQEG+pbikwALBYqMYfHKoIaVxlIJgl0kOvCN07TDL1AWQPuMn5NjnYelGco8340LK8QtaOSMK4E+49fFqR68eUlForYt5MEiJl/vyGOodJhcPHoP8jVSXmWyftTmhHdQyJkcWuFHlWO1pMP2eWGI+PJAnadSqUIrRoZWYnxx6ELt7mFkeTU+SM52n5ss2BX1yIHjknH2NAe6E/hWBX0ko9TPoABuDAAXME61WkLuZiFbazgp2iElR2FIgOUwNG72H0M7XNsC7qSQPHTaq3/RB+maIyM9GT37OS0FilhNHk+uPMUuj1qb418/2iiuuuOKP8SMAAP///253LgAKAAABAAD//4Ez0e3HAQAA
+    cosign.sigstore.dev/signature: MEYCIQC2+LTL39prQEhG8aEqUUr+6VPR2JXmhRJo0JYXMU/FjAIhANgEkjvtVFPHOtGqaSdRMZSXovQf71fiBIIc2wrH5vlC
+  creationTimestamp: null
+  labels:
+    signatureResource: "true"
