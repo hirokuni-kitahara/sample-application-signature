@@ -2,46 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDHATj+H4sIAAAAAAAA/+xTzW7TQBDO2U+x6n2bdXCbyFc4cCgS4sB9sp44Q/dPO+NIBvHuyG5wnahQRSAhpHyX3dHMfD+2dik+LW30KSMzhVYLZN1+1etqu940drPZlbD0EGiHLLc9eLe4GMYYc19V42mMOT/L6n69KKs3Zn23Lk1VLsxqZVarhTKXS12OjgXywpgco/xu7rX+ebj/BJDoM2amGGp1KIsGBGr17XvxSKGp1dsYdtR+gFR4FBibhVIOtuh4uCkFKd0+dlvMAQX5luKSAgsEi7Vi8MmhhpTGUQqCbSbpeU/ommGWqQ0gXcZPyLHLw9KN5A5vxoWU4xe0ckYUwJ9w6+PVjl49pKLQWhfzYJASLw/lMdQ7TC72HoP8jVSXmWyetTmhHdQyJkcWuFblWB1oMP2eWGLuH8iT1OquUIrRoZWYnxx6ELt/mFkeTU+SM52n5ss2BX1yIHjknH2NAe6E/hWBX0ko9TPoABuDAAXME61WkNuZiFbazgp2iElR2FEg6aeGjd5DaOZrW+D9VJKHFmvVbbsgXT1E5GejJz/npSAxy4mjyfXHmKVWG1P862d7xRVXXPHH+BEAAP//HC0aXQAKAAABAAD//xjldxzHAQAA
-    cosign.sigstore.dev/signature: MEUCIQCL76/i58t8/fjV3OIEAZghfFgK4uu4+JHSQGhllpVsFgIgfr/J1gKAGULfyZTdgcrwBhzcLlS1SRbTsC9j6XctX4g=
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDJATb+H4sIAAAAAAAA/+xTTWvbTBD2Wb9iyX3tVWJbRtf3PfSQQumh9/FqLE+zX+yMDG7pfy9SXEU2aYNpoRT8XHaHmXk+JHYhPi1s9CkjM4VWC2TdftHVclttGrvZ7EpYeAi0Q5b5EbybXQ1jjFkvl8NpjLk8y+W6mpXLB1OtqnJVrWbm/t48rGfKXC91PToWyDNjcozyq7m3+pfh/hFAok+YmWKo1aEsGhCo1ddvxROFplb/xbCj9j2kwqPA0CyUcrBFx/1NKUhp/tRtMQcU5DnFBQUWCBZrxeCTQw0pDaMUBNtMcuQ9oWv6WaY2gHQZPyLHLvdLd5I7vBsWUo6f0coFUQB/xq1PVzt49ZCKQmtdTINBSrw4lKdQ/2Ny8egxyJ9IdZ3J5kWbE9peLWNyZIFrVQ7VgXrT74gl5uMjeZJarQqlGB1aifnZoQex+8eJ5cH0KDnReW6+blPQJweCJ87J1+jhzujfEPiZhFI/gvawMQhQwDzSagW5nYhope2kYIeYFIUdBZLj2LDRewjNdG0LvB9L8tBirbptF6Sr+4j8YvTs57wWJGY5czS6/hCz1Gpjir/9bG+44YYbfhvfAwAA//8z1MmjAAoAAAEAAP//DY0ClckBAAA=
+    cosign.sigstore.dev/signature: MEQCICwh2QxxNc9LGuONqfAduIJn8ui0m7f/s9BRyl05ITiKAiAvXX735goD1DwYt9hbrAZSTeVZ1ery+akP7urbUTllCA==
   creationTimestamp: null
   labels:
     signatureResource: "true"
-    integrityshield.io/signatureResource: "true"
-    project: sample-app
-  name: sample-app-sample-configmap
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDJATb+H4sIAAAAAAAA/+yUT2/TQBDFc/anGPXuZJ1/Rb7CgUOREAfuk83EGbr/tDOuFBDfHdkJkZ1CoRUSQuRddjc7O+/9JpJn6tPMRp8yiXBoSsVcNp8Xt2a+WM3ny8XMY+AdiU4P6N3kJTLGmPVy2a/GmMu1WpvlpFouzO1qXVXzamLmVbU2EzAvcnumWlHME2NyjPpU3a/uL+H+EQFg4o+UhWOo4aEqALaoWMOXrwXAPYdtDa9j2HHzDlMB4EmxLygAABxuyMlx33VK0/t2QzmQkkw5zjiIYrBUg6BPjkpM6VTMQanJrAfZM7ltVy3cBNQ20weS2Obu2Y3mlm5OT1KOn8jqo2YB/cihPG1tn9tjKsqyLMakmJLMetwj4xtKLh48Bf2TkM9NvB2mkET26JopObYoNVSn8wN3GG9ZNObDHXvWGlb9nZAjqzF/z+tR7f5uhNBDnO1Hnk/HVvLJodK592hOj2f1G1Y/NxsOoJONQZED5UH7EjA3I7sSSjs6iiNKwGHHgfUwuLLRewzb8eMNyn7wA3tsqIZ20wZt6w5dhtFHf+OP4WLWi3xnjvcxaw2vTPG3vwFXXXXV/6lvAQAA//98GQ/ZAAoAAAEAAP//hjF8BckBAAA=
-    cosign.sigstore.dev/signature: MEUCIQC8UDjB24QZqbOnGD3ASxHW4Yc5AMYR2eUqboZUV7L3UQIgKOVPqBfESi3nPpGPOEBvFHQZ9oiX1IZqnGhzrSfcdYU=
-  labels:
-    app.kubernetes.io/instance: sample-app
-    project: sample-app
-  name: sample-app-sample-deployment
-spec:
-  replicas: 1
-  revisionHistoryLimit: 5
-  selector:
-    matchLabels:
-      app: sample-deployment
-      project: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-deployment
-        project: sample-app
-    spec:
-      containers:
-      - args:
-        - -c
-        - sleep infinity
-        command:
-        - bash
-        image: ubuntu:latest
-        name: sample-deployment
-        ports:
-        - containerPort: 80
