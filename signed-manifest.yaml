@@ -1,0 +1,47 @@
+apiVersion: v1
+data: {}
+kind: ConfigMap
+metadata:
+  annotations:
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDJATb+H4sIAAAAAAAA/+yUT2/TQBDFc/anGPXuZJ1/Rb7CgUOREAfuk83EGbr/tDOuFBDfHdkJkZ1CoRUSQuRddjc7O+/9JpJn6tPMRp8yiXBoSsVcNp8Xt2a+WM3ny8XMY+AdiU4P6N3kJTLGmPVy2a/GmMu1WpvlpFouzO1qXVXzamLmVbU2EzAvcnumWlHME2NyjPpU3a/uL+H+EQFg4o+UhWOo4aEqALaoWMOXrwXAPYdtDa9j2HHzDlMB4EmxLygAABxuyMlx33VK0/t2QzmQkkw5zjiIYrBUg6BPjkpM6VTMQanJrAfZM7ltVy3cBNQ20weS2Obu2Y3mlm5OT1KOn8jqo2YB/cihPG1tn9tjKsqyLMakmJLMetwj4xtKLh48Bf2TkM9NvB2mkET26JopObYoNVSn8wN3GG9ZNObDHXvWGlb9nZAjqzF/z+tR7f5uhNBDnO1Hnk/HVvLJodK592hOj2f1G1Y/NxsOoJONQZED5UH7EjA3I7sSSjs6iiNKwGHHgfUwuLLRewzb8eMNyn7wA3tsqIZ20wZt6w5dhtFHf+OP4WLWi3xnjvcxaw2vTPG3vwFXXXXV/6lvAQAA//98GQ/ZAAoAAAEAAP//hjF8BckBAAA=
+    cosign.sigstore.dev/signature: MEUCIQC8UDjB24QZqbOnGD3ASxHW4Yc5AMYR2eUqboZUV7L3UQIgKOVPqBfESi3nPpGPOEBvFHQZ9oiX1IZqnGhzrSfcdYU=
+  labels:
+    app.kubernetes.io/instance: sample-app
+    integrityshield.io/signatureResource: "true"
+    project: sample-app
+  name: sample-app-sample-configmap
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDJATb+H4sIAAAAAAAA/+yUT2/TQBDFc/anGPXuZJ1/Rb7CgUOREAfuk83EGbr/tDOuFBDfHdkJkZ1CoRUSQuRddjc7O+/9JpJn6tPMRp8yiXBoSsVcNp8Xt2a+WM3ny8XMY+AdiU4P6N3kJTLGmPVy2a/GmMu1WpvlpFouzO1qXVXzamLmVbU2EzAvcnumWlHME2NyjPpU3a/uL+H+EQFg4o+UhWOo4aEqALaoWMOXrwXAPYdtDa9j2HHzDlMB4EmxLygAABxuyMlx33VK0/t2QzmQkkw5zjiIYrBUg6BPjkpM6VTMQanJrAfZM7ltVy3cBNQ20weS2Obu2Y3mlm5OT1KOn8jqo2YB/cihPG1tn9tjKsqyLMakmJLMetwj4xtKLh48Bf2TkM9NvB2mkET26JopObYoNVSn8wN3GG9ZNObDHXvWGlb9nZAjqzF/z+tR7f5uhNBDnO1Hnk/HVvLJodK592hOj2f1G1Y/NxsOoJONQZED5UH7EjA3I7sSSjs6iiNKwGHHgfUwuLLRewzb8eMNyn7wA3tsqIZ20wZt6w5dhtFHf+OP4WLWi3xnjvcxaw2vTPG3vwFXXXXV/6lvAQAA//98GQ/ZAAoAAAEAAP//hjF8BckBAAA=
+    cosign.sigstore.dev/signature: MEUCIQC8UDjB24QZqbOnGD3ASxHW4Yc5AMYR2eUqboZUV7L3UQIgKOVPqBfESi3nPpGPOEBvFHQZ9oiX1IZqnGhzrSfcdYU=
+  labels:
+    app.kubernetes.io/instance: sample-app
+    project: sample-app
+  name: sample-app-sample-deployment
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: sample-deployment
+      project: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-deployment
+        project: sample-app
+    spec:
+      containers:
+      - args:
+        - -c
+        - sleep infinity
+        command:
+        - bash
+        image: ubuntu:latest
+        name: sample-deployment
+        ports:
+        - containerPort: 80
