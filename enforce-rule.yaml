@@ -12,7 +12,7 @@ spec:
       - ConfigMap
       - Deployment
     namespaces:
-    - default
+    - sample-ns
   parameters:
     action:
       mode: enforce
