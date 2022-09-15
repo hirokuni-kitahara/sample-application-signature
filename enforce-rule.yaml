@@ -18,7 +18,11 @@ spec:
       mode: enforce
     constraintName: enforce-rule-sample-profile
     keyConfigs:
-    - key: "0Y0\x13\x06\a*�H�=\x02\x01\x06\b*�H�=\x03\x01\a\x03B\0\x04�9ߨE�-��ZEW��N�m�#U��^��\x05�g\x15��;$�5�R\x05���ۤ���Rj����l���m;\x1EyC��D"
+    - key: |
+        -----BEGIN PUBLIC KEY-----
+        MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5znfqEW3LfyMWkVXrpxOxG30I1X5
+        jl7n/wWiZxWxtDskyTWFUgWYtILbpJ+j9lJqrPfBlmyp4LxtOx55Q/TYRA==
+        -----END PUBLIC KEY-----
     objectSelector:
     - name: sample-kustomize-guestbook-ui
     signatureRef:
