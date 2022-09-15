@@ -24,6 +24,7 @@ spec:
           MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5znfqEW3LfyMWkVXrpxOxG30I1X5
           jl7n/wWiZxWxtDskyTWFUgWYtILbpJ+j9lJqrPfBlmyp4LxtOx55Q/TYRA==
           -----END PUBLIC KEY-----
+        name: enforce-rule-sample-profile
     objectSelector:
     - name: sample-kustomize-guestbook-ui
     signatureRef:
