@@ -19,3 +19,7 @@ spec:
     constraintName: enforce-rule-sample-profile
     objectSelector:
     - name: sample-kustomize-guestbook-ui
+    signatureRef:
+      signatureResourceRef:
+        name: signature-resource
+        namespace: sample-ns
