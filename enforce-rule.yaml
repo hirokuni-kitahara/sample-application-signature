@@ -9,7 +9,7 @@ spec:
       - ""
       - apps
       kinds:
-      - ConfigMap
+      - Service
       - Deployment
     namespaces:
     - sample-ns
@@ -18,5 +18,4 @@ spec:
       mode: enforce
     constraintName: enforce-rule-sample-profile
     objectSelector:
-    - name: sample-configmap
-    - name: sample-deployment
+    - name: guestbook-ui
