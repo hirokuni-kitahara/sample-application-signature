@@ -1,22 +1,20 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: ManifestIntegrityConstraint
 metadata:
-  name: enforce-rule-sample-profile
+  name: enforce-rule-sample-profile-0
 spec:
   match:
     kinds:
     - apiGroups:
       - ""
-      - apps
       kinds:
-      - Service
       - Deployment
-    namespaces:
-    - sample-ns
+      - Service
+    namespaces: []
   parameters:
     action:
       mode: enforce
-    constraintName: enforce-rule-sample-profile
+    constraintName: enforce-rule-sample-profile-0
     keyConfigs:
     - key:
         PEM: |
@@ -24,10 +22,9 @@ spec:
           MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5znfqEW3LfyMWkVXrpxOxG30I1X5
           jl7n/wWiZxWxtDskyTWFUgWYtILbpJ+j9lJqrPfBlmyp4LxtOx55Q/TYRA==
           -----END PUBLIC KEY-----
-        name: enforce-rule-sample-profile
-    objectSelector:
-    - name: sample-kustomize-guestbook-ui
+        name: enforce-rule-sample-profile-0
+    objectSelector: []
     signatureRef:
       signatureResourceRef:
         name: signature-resource
-        namespace: sample-ns
+        namespace: ""
