@@ -1,0 +1,30 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ManifestIntegrityConstraint
+metadata:
+  name: enforce-rule-sample-profile-0-protection
+spec:
+  match:
+    kinds:
+    - apiGroups:
+      - constraints.gatekeeper.sh
+      kinds:
+      - ManifestIntegrityConstraint
+  parameters:
+    action:
+      mode: enforce
+    constraintName: enforce-rule-sample-profile-0-protection
+    keyConfigs:
+    - key:
+        PEM: |
+          -----BEGIN PUBLIC KEY-----
+          MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5znfqEW3LfyMWkVXrpxOxG30I1X5
+          jl7n/wWiZxWxtDskyTWFUgWYtILbpJ+j9lJqrPfBlmyp4LxtOx55Q/TYRA==
+          -----END PUBLIC KEY-----
+        name: enforce-rule-sample-profile-0
+    objectSelector:
+    - name: enforce-rule-sample-profile-0
+    - name: enforce-rule-sample-profile-0-protection
+    signatureRef:
+      signatureResourceRef:
+        name: signature-resource
+        namespace: sample-ns
