@@ -1,7 +1,11 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: ManifestIntegrityConstraint
 metadata:
-  name: enforce-rule-sample-profile-0-protection
+  annotations:
+    cosign.sigstore.dev/bundle: H4sIAAAAAAAA/0STz46jOBCH34XrjNQYcBIi7aGTAIGOycRgO/YNMAlgm850kuXPaN59lZ2V9vorVanq01e/rKy99rUM+sfXlLemvj8Kc7PWFgrINn7/9jM+HCvudTh6//Txz/fJ/ybDgw824PSYEUxEZv5+E72e3tvg/Wu/aCvz3AffDnBjN+jNDYS5dG7xFmg8gDdPnZ0DPUF8G/6yvls/ikl/FtJa/7LKTzlZa6uekqaKNBPnZC6Y/4y7zxZtveHQBe1hm3wVDKpXVkThXERUVYZ+lW6i4nZoK3ej+RQv6ilR/IybuLstY9M0lXNtj/295WzsSze5yah5vGZUTtOgjjivXmnCu2SkPbaxy7tEpzm305lq3vEhzdMm3QUuz9V43G00msOW58RBM1ZHJjQ3p0l0yk13uDvuGoVMaMTuCrgTwONOObzTOu6Bf9i+bpJPfsagMuTPTo7/lBF9ym28iBUIKUkTnOMHt/VEHEoYSbd1f/VO5gFxnn4IdROlI7FUN5Nl/rGmxJP7AHLjd5kd3jAJ76XBqshTVnb4VJrTmDvj9khDBzsxYD23K9Xsc4omacMOBVIjoj8qlogfWXyP+w3gZrxx+6Hr7F+WXelAWzBov5jlIRpkMOaIpBll+INGekuooJkCOSWgJ/OGMTXmaI8RmTcHGtKiMqeBdumZsgbxLhwyQx+lKzEKREYBvedRPFbBTZfMd4miEdFqIDopUCCiXDeDpLcnVoLVCqbMwHuu+SRDec6CmysIgWmYLPKzzGkgRK7DoWJJIPYUIQdzTsWQhnwudpssC+AkqMhYmNypgQyxYSCAegVLw9JNmsKMM3FgVFO6Zypt8RwAbuMsZzQmeqNxSEZKEaRUskwlJ7rbHP7nIUgBwp4SwU4Ah2WAE3zGEQX/1fd4J2bbf3lwOdsv+dv+UV+/ikctX19nrcFi4TlLz3HBd0t/XuNe1qO19uzlcrVa/ol21tqqbOm4clFIz174S/fiQ+hf3LJwJKgKG1xWHvCWcnW5VLBceR6sHMe7+KvShz5Y2UBav3//EwAA//9k/njc8wMAAA==
+    cosign.sigstore.dev/message: H4sIAAAAAAAA/wDzAQz+H4sIAAAAAAAA/+xTXVPiMBTlmV+R953SVFpwmfEBpbpVQNhVK76FcFtLmw+TsLTM/vidYkWGGV14cnaG85Lb23N6zk0T2zBpU8GkAq0THluGKCteWU6LnrScVvOUOqc2IzyJQJtGQVhWOxgYY9xy3fWKMd5dHRd7NcdtOq7ntt1Wu4ZPHK/t1hA+3OpwLLQhqoaxEsJ8xvvX+93h/hMQmTyA0ongHUQF10aRhBvdiImBFECCauhn+7czBUOceprwWQcNquMQcAOxSkxxsRHWGRgyI4Z06ghxwqCDgEdCUbDUIgNLEyYzsKQSUZKBhRuZoGldS6ClgBFDn8sCodJJv5YWIjK5UmIhq0bZ+jBrxdjSl/TPIiMkiSIMDKhKQagpN6RSMzF7H2Pdezcf7jviOhOUtlESbwZLoXhzQWjkDzroz+YRIavEuX8VDNHo/rwfXKAbf7JubpEGl+nSX05+3IinYDXHF93xJKjqXndMe+O463srHr34YbMfFYMwfXhUMr/Nr5o4cB69rU/Nsza3l2HylIe56em0uAsv7+NwYoL+VF5/m3/Prl/UKDrPWCHdfm5uc88b23eTn92zs93Y/rD3Yeg9zsWaK6ZzoOYXZECNUG97tq96L+brz/nqS3jEEUcc8QX4GwAA//8A/FBKAAoAAAEAAP//bB2M2PMBAAA=
+    cosign.sigstore.dev/signature: MEUCIE4mcIrSeTYCBzx8BkyE3JfJYogQvJfI/NyU8tq9bocKAiEAlnddi3Vn4Pnd1OlB9QvGb5Zv4rHGMS2wNc0Ge1IJqbY=
+  name: enforce-rule-sample-profile-0.lock
 spec:
   match:
     kinds:
@@ -12,7 +16,7 @@ spec:
   parameters:
     action:
       mode: enforce
-    constraintName: enforce-rule-sample-profile-0-protection
+    constraintName: enforce-rule-sample-profile-0.lock
     keyConfigs:
     - key:
         PEM: |
@@ -23,8 +27,4 @@ spec:
         name: enforce-rule-sample-profile-0
     objectSelector:
     - name: enforce-rule-sample-profile-0
-    - name: enforce-rule-sample-profile-0-protection
-    signatureRef:
-      signatureResourceRef:
-        name: signature-resource
-        namespace: sample-ns
+    - name: enforce-rule-sample-profile-0.lock
