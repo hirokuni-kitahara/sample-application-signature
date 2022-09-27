@@ -10,7 +10,8 @@ spec:
       kinds:
       - Deployment
       - Service
-    namespaces: []
+    namespaces:
+    - sample-ns
   parameters:
     action:
       mode: enforce
@@ -27,4 +28,4 @@ spec:
     signatureRef:
       signatureResourceRef:
         name: signature-resource
-        namespace: ""
+        namespace: sample-ns
